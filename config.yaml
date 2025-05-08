@@ -1,0 +1,37 @@
+input_sdf: "/home/knvvv/bo/testset/{mol_name}.sdf"
+logfile: "./{mol_name}.log"
+max_iterations: 10
+max_nothing_new: 5
+
+ik_config:
+  # mode: "grid"
+  # cache_path: 'temp/'
+  # show_status: true
+  # rotamer_analysis:
+  #   bondlength_threshold: 0.3
+  #   valence_threshold: 5.0
+  #   fixed_dihedral_threshold: 5.0
+  #   stereocenter_rmsd_threshold: 0.1
+  
+  mode: "existing"
+  existing_path: '/home/knvvv/bo/ringo_ensembles/gfnff_{molname}.xyz'
+  # show_status: true
+  
+  # mode: "random"
+  # num_iterations: 20
+
+  # mode: "mcr"
+  # num_iterations: 20
+
+bo_config:
+  # rolling_window_size: 5
+  # rolling_std_threshold: 0
+  # rolling_mean_threshold: 0
+  use_physics_kernel: true
+  acquisition_function: "ei"
+
+leveloftheory:
+  flags: "--gfn2 --alpb water -P 1"
+  force_constant: 5.0
+
+debug_mode: true
