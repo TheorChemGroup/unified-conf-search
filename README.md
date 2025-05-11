@@ -1,4 +1,4 @@
-### Unified conformaitonal search algorithm
+## Unified conformaitonal search algorithm
 
 Conformational search method for cyclic molecules based on inverse kinematics Monte-Carlo and Bayessian optimization:
 
